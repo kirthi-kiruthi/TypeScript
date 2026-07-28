@@ -35,3 +35,5 @@ let arrof2user;
 arrof2user = [{ name: "kirthi ", age: 34, course: "typescipt" }];
 console.log(arrof2user);
 export {};
+
+
