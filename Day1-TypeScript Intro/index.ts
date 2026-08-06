@@ -6,13 +6,13 @@ console.log(a)
 let ArrofData =["Kiruthika","Annaya", "Murugan"]; //String
 console.log(ArrofData);
 
-let ArrOfUsers= ["0.00","0.99","0.88"]; //
+let ArrOfUsers= ["0.00","0.99","0.88"]; //decimals
 console.log(ArrOfUsers);
 
-let Arrofclass = [12,23,24];
+let Arrofclass = [12,23,24];//numbers
 console.log(Arrofclass);
 
-let ArrofJob = ['True', 'False'];
+let ArrofJob = ['True', 'False'];//boolean
 console.log(ArrofJob);
 export {};
 
@@ -62,6 +62,11 @@ arrof2user = [{name: "kirthi ", age:34, course :"typescipt"}];
 console.log(arrof2user);
 
 
+//literal type 
+let status =  "approved"| "pending"|"rejected";
+status = "approved";
+console.log(status);
+status = "Completed"; //
 
 
 
