@@ -51,46 +51,104 @@
 // let data = Sumofstrings("Kiruthika", "Murugan" , 21)
 // console.log (data);
 
-type FunctionType = {
-    (a: number,b: number,c: string): number |string
+// type FunctionType = {
+//     (a: number,b: number,c: string): number |string
+// }
+
+// let sumOfNums: FunctionType  = function(a, b, c) {
+//     return a + b + c
+// }
+
+// let data = sumOfNums(23, 44, "Kiruthika")
+// console.log(data)
+
+
+// //Function Expression:
+
+// let mycompany = function (a : number , b : number)
+// { 
+//     console.log ("This is function expression");
+//     return a + b;
+// }
+// let data1 = mycompany(23, 1233445);
+// console.log(data1);
+
+
+
+// //Sample program 
+
+// type trainer = { 
+//    ( a : string , b : string) : string;
+// }
+// let qspiders : trainer = function (a,b)
+// {
+//     return a + b;
+// };
+// let data2 = qspiders ("Amarjeet" , "Kumar");
+// console.log(data2);
+
+// //IIFE Function
+
+// //Syntax : (declaration)(exceution)
+// (function(a : number , b : string){
+//     console.log("This is Typescript class");
+//     console.log(a + b);
+// })(8.655656456 , "kiruthika");
+
+
+//Nested functions
+
+function school (){
+    console.log("Place to study");
+    function Principal (){
+      console.log("Head of the school");
+      function Teacher (){
+        console.log ("Teaches Subjects ");
+      }
+      Teacher();
+    }
+    Principal();
 }
+school();
 
-let sumOfNums: FunctionType  = function(a, b, c) {
-    return a + b + c
-}
+//Nested Currying
+//Closure  --> Very important topic 
 
-let data = sumOfNums(23, 44, "Kiruthika")
-console.log(data)
-
-
-//Function Expression:
-
-let mycompany = function (a : number , b : number)
-{ 
-    console.log ("This is function expression");
-    return a + b;
-}
-let data1 = mycompany(23, 1233445);
-console.log(data1);
-
-
-
-//Sample program 
-
-type trainer = { 
-   ( a : string , b : string) : string;
-}
-let qspiders : trainer = function (a,b)
+function parent1 ()
 {
-    return a + b;
-};
-let data2 = qspiders ("Amarjeet" , "Kumar");
-console.log(data2);
+    let username : string;
+    username = "Kiruthika";
+    console.log("Kiruthika is a parent");
+    function child1 (){
+        let childname : string;
+        childname = "Ananya";
+        console.log ("Ananaya is a child");
+    }
+return child1
+}
 
-//IIFE Function
+let family = parent1();
+family();
 
-//Syntax : (declaration)(exceution)
-(function(a : number , b : string){
-    console.log("This is Typescript class");
-    console.log(a + b);
-})(8.655656456 , "kiruthika");
+
+//Generator functions
+
+// function * username1 (){
+//     yield console.log("Kiruthika is first");
+//     yield console.log("Nisha is second");
+//     yield console.log ("ANANAYA IS THIRD");
+// return username1();
+// }
+// let users = username1();
+// console.log(users.next());
+// console.log(users.next());
+// console.log(users.next());
+// console.log(users.next());
+
+function* firstgenerator (){
+    let a = 10;
+    console.log(a);
+    return `value of ${a}`;
+}
+let res12 = firstgenerator();
+console.log (res12.next());
